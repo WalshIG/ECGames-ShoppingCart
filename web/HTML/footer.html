@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="footer">
+<p>
+	ECGames &copy; 2018
+	<br>
+	<br>
+	
+	<?php 
+		$link=@mysqli_connect('localhost','cst178','365645','ICS199Group01_dev');
+		if(!$link){
+			die('ERROR: '.mysqli_connect_error());
+		}
+		
+		//Variables and query
+		$customer_id = $_SESSION['customer_id'];
+		$login_date = "SELECT last_login from customer WHERE customer_id = $customer_id";
+		$login_date_query = mysqli_query($link, $login_date);
+		$login_date_result = $login_date_query->fetch_array(MYSQLI_NUM);
+		
+		echo "<i>Last login date: " . $login_date_result[0] . "</i>";
+	?>
+</p>
+</div>
+
+</body>
+</html>

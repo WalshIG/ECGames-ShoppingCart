@@ -1,0 +1,218 @@
+body {
+    font-family: Arial;
+    padding: 10px;
+	/* The Background Color for the WHOLE PAGE. Dark red = #632323 */
+    background: white;
+	//background-image: url('images/bg/botw.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+    
+    h2{
+		color:red;
+		font:bold;
+    }
+	
+
+
+    .header {
+        /* background-color: crimson; */
+		background-image: linear-gradient(to bottom, crimson, crimson);	/* added in step 9 */
+        padding: 20px;
+        text-align: center;
+		text-shadow: 0 -1px 0 #396715;
+		color: white;
+    }  
+    
+	input[type=submit] {
+		background-color: #68b12f;
+		background: -webkit-gradient(linear, left top, left bottom, from(#13d80d), to(#0e910a));
+		background: -webkit-linear-gradient(top, #13d80d, #0e910a);
+		background: -moz-linear-gradient(top, #13d80d, #0e910a);
+		background: -ms-linear-gradient(top, #13d80d, #0e910a);
+		background: -o-linear-gradient(top, #13d80d, #0e910a);
+		background: linear-gradient(top, #13d80d, #0e910a);
+		border: 1px solid #509111;
+		border-bottom: 1px solid #5b992b;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		box-shadow: inset 0 1px 0 0 #9fd574;
+		-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+		-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+		-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+		-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+		color: white;
+		font-weight: bold;
+		padding: 6px 20px;
+		text-align: center;
+		text-shadow: 0 -1px 0 #396715;
+	}
+	
+	input[type=submit]:hover {
+		//opacity:.85;
+		cursor: pointer;
+		-ms-transform: scale(1.2); /* IE 9 */
+		-webkit-transform: scale(1.2); /* Safari 3-8 */
+		transform: scale(1.2);
+		transition: transform .2s; /* Animation */		
+	}
+	
+	a.submit {
+		background-color: #68b12f;
+		background: -webkit-gradient(linear, left top, left bottom, from(#13d80d), to(#0e910a));
+		background: -webkit-linear-gradient(top, #13d80d, #0e910a);
+		background: -moz-linear-gradient(top, #13d80d, #0e910a);
+		background: -ms-linear-gradient(top, #13d80d, #0e910a);
+		background: -o-linear-gradient(top, #13d80d, #0e910a);
+		background: linear-gradient(top, #13d80d, #0e910a);
+		border: 1px solid #509111;
+		border-bottom: 1px solid #5b992b;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
+		box-shadow: inset 0 1px 0 0 #9fd574;
+		-webkit-box-shadow: 0 1px 0 0 #9fd574 inset ;
+		-moz-box-shadow: 0 1px 0 0 #9fd574 inset;
+		-ms-box-shadow: 0 1px 0 0 #9fd574 inset;
+		-o-box-shadow: 0 1px 0 0 #9fd574 inset;
+		color: white;
+		font-weight: bold;
+		padding: 6px 20px;
+		font-size: 12px;
+		text-align: center;
+		text-shadow: 0 -1px 0 #396715;
+		text-decoration: none;
+	}
+	
+	a.submit:hover {
+		opacity:.85;
+		cursor: pointer;
+	
+	}	
+        
+    /* Style the top navigation bar */
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    } 
+    
+     /* Style the topnav links */
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change color on hover */
+    .topnav a:hover {
+      background-color: #13d80d; /* The hover buttons on the header */
+     color: black;
+    }
+	
+	/* Admin-only buttons */
+	.topnav a2 {
+        float: left;
+        display: block;
+        color: cyan;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+	
+	/* Change color on hover */
+    .topnav a2:hover {
+      background-color: cyan;
+     color: black;
+    }
+     
+    .active {
+    background-color: #4CAF50;
+}
+
+	table {
+		//border: 1px solid red;
+	}
+	
+	table th {
+		background-image: linear-gradient(to bottom, crimson, #ba2e2e);	/* added in step 9 */
+		text-shadow: 0 -1px 0 #396715;
+		color: white;
+	}
+	
+	.zoom:hover {
+		-ms-transform: scale(1.5); /* IE 9 */
+		-webkit-transform: scale(1.5); /* Safari 3-8 */
+		transform: scale(1.3); 
+		transition: transform .5s; /* Animation */
+	}
+	
+	.zoom2:hover {
+		-ms-transform: scale(1.5); /* IE 9 */
+		-webkit-transform: scale(1.5); /* Safari 3-8 */
+		transform: scale(1.3); 
+		transition: transform .5s; /* Animation */
+	}
+
+	#viewcart tr:nth-child(even){background-color: #dddddd;}
+	#viewcart tr:nth-child(odd){background-color: #eeeeee;}
+	#viewcart tr:hover {background-color: orange;}
+	
+	/*
+	#invisible tr:nth-child(even){background-color: #dddddd;}
+	#invisible tr:nth-child(odd){background-color: #dddddd;}
+	//#invisible tr:hover {background-color: #dddddd;}
+	*/
+	
+	#invisible {
+		text-shadow: 0 -1px 0 #396715;
+		color: black;
+	}
+	
+	.gamename {
+		text-shadow: 0 1px 0 grey;
+	}
+	
+	#editgame tr:nth-child(even){background-color: #e1ffd8;}
+	#editgame tr:nth-child(odd){background-color: #c8ffb7;}
+	#editgame td:hover {background-color: #66ff4f;}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button#contact {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 6px;
+  color: white;
+  background-color: dodgerblue;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+
+.grid_8 {
+  text-align: center;
+  background: #fcfcfa;
+  color: black;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}

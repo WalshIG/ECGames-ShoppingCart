@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<?php
+session_start();
+$link=@mysqli_connect('localhost','cst178','365645','ICS199Group01_dev');
+	if(!$link){
+		die('ERROR: '.mysqli_connect_error());
+	}
+	
+	//This is the current username for the session
+	$username = $_SESSION['username'];
+	$admin_query = "SELECT admin_privilege FROM customer WHERE username = '$username'";
+	$check_admin = mysqli_query($link, $admin_query);
+	
+	//This returns the value from the query
+	$admin_result = $check_admin->fetch_array(MYSQLI_NUM);
+	
+	//Welcome messages!
+	if((isset($username)) && ($admin_result[0] == 0)){
+			echo "Welcome! $username";
+	} else if ($admin_result[0] == 1){
+			echo "Welcome! <strong>Administrator:</strong> $username";
+	} else {
+		echo "Welcome! Please log in or create an account by clicking the 'Log In' button on the right side of the page!";
+	}
+	$pagename = $_SESSION['pagename'];
+?>
+	
+    <head>
+       <title>ECGames Web App</title> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+        </head>
+    <body>
+        <div class="header">
+            <h1><?php echo "$pagename"; ?></h1>
+        </div>
+		
+	
+  <div class="topnav">
+    <a href="index.php">Home</a><a href="shoppingcart.php?prod=0">View Cart</a><a href="checkout.php">Check Out </a><a href="orderhistory.php">Order History</a><a href="about_us.php">About Us</a>
+	<?php
+		//If the username for the session is not set, echo the login
+		if(!isset($_SESSION['username'])){
+			echo "<a href='login.php' style='float:right'>Log In</a>";
+			} else { 
+			echo "<a href='logout.php' style='float:right'>Log Out</a>";
+		 } 
+		
+	
+		if(basename($_SERVER['PHP_SELF'])== login.php){
+			echo "true";
+		}
+		
+		if($admin_result[0] == 1){	
+			echo "<a href='adminaccount.php' class='button'>Add Administrator Account</a>";
+		    echo "<a href='addgame.php' class='button'>Add Game</a>";
+		 }
+		 
+			echo "<a href='http://deepblue.cs.camosun.bc.ca/~cst178/199_dev/privacyPolicy.php' class='button'>Privacy Policy</a>";
+	
+	?>
+</div>
+<br>
+</body>
+</html>
